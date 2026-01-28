@@ -4,10 +4,15 @@ pipeline {
   tools {
     nodejs 'node18'   // must match Jenkins NodeJS tool name
   }
-
+  
   environment {
-    NODE_ENV = 'test'
-  }
+  NODE_ENV = 'test'
+  WM_MARKETPLACE_USER = credentials('WM_MARKETPLACE_USER')
+  WM_MARKETPLACE_PASS = credentials('WM_MARKETPLACE_PASS')
+  WM_SSO_USER = credentials('WM_SSO_USER')
+  WM_SSO_PASS = credentials('WM_SSO_PASS')
+}
+
 
   stages {
 
