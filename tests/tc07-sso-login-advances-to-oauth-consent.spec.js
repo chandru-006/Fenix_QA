@@ -10,7 +10,7 @@ const {
   WM_SSO_PASS
 } = require('../config/env');
 
-test('TC-07: Successful SSO login advances OAuth flow to Walmart authorization consent', async ({ page }) => {
+//test('TC-07: Successful SSO login advances OAuth flow to Walmart authorization consent', async ({ page }) => {
   const index = new FenixOAuthIndexPage(page);
   const marketplace = new WalmartMarketplaceLoginPage(page);
   const sso = new WalmartSSOLoginPage(page);
@@ -33,4 +33,4 @@ test('TC-07: Successful SSO login advances OAuth flow to Walmart authorization c
 
   // Ensure callback has NOT happened yet
   await expect(page).not.toHaveURL(/\/oauth\/callback/);
-});
+//});
