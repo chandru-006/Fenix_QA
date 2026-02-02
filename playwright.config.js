@@ -14,7 +14,7 @@ module.exports = defineConfig({
 
   use: {
     headless: true,
-    screenshot: 'only-on-failure',
+    screenshot: 'on',
     video: 'retain-on-failure',
     trace: 'retain-on-failure'
   }
