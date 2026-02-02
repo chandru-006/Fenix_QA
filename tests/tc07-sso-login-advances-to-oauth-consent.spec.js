@@ -29,8 +29,8 @@ test('TC-07: Successful SSO login advances OAuth flow to Walmart authorization c
   );
 
   // OAuth authorization / consent reached
-  //await expect(page).toHaveURL(/login\.account\.wal-mart\.com\/consent/);
+  await expect(page).toHaveURL(/login\.account\.wal-mart\.com\/consent/);
 
   // Ensure callback has NOT happened yet
-  //await expect(page).not.toHaveURL(/\/oauth\/callback/);
+  await expect(page).not.toHaveURL(/\/oauth\/callback/);
 });
